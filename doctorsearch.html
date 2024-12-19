@@ -1,5 +1,5 @@
 <!DOCTYPE html>
- <?php #include("func.php");?>
+ <?php #include("func.html");?>
 <html>
 <head>
 <title>MedConnect</title>
@@ -8,7 +8,7 @@
 </head>
 <body>
 <?php
-include("newfunc.php");
+include("newfunc.html");
 if(isset($_POST['doctor_search_submit']))
 {
 	$contact=$_POST['doctor_contact'];
@@ -17,7 +17,7 @@ if(isset($_POST['doctor_search_submit']))
   $row=mysqli_fetch_array($result);
   if($row['username']=="" & $row['password']=="" & $row['email']=="" & $row['docFees']==""){
     echo "<script> alert('No entries found!'); 
-          window.location.href = 'admin-panel1.php#list-doc';</script>";
+          window.location.href = 'admin-panel1.html#list-doc';</script>";
   }
   else {
     echo "<div class='container-fluid' style='margin-top:50px;'>
@@ -46,7 +46,7 @@ if(isset($_POST['doctor_search_submit']))
           <td>$docFees</td>
         </tr>";
 	// }
-	echo "</tbody></table><center><a href='admin-panel1.php' class='btn btn-light'>Back to dashboard</a></div></center></div></div></div>";
+	echo "</tbody></table><center><a href='admin-panel1.html' class='btn btn-light'>Back to dashboard</a></div></center></div></div></div>";
 }
   }
 	

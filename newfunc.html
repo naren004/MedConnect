@@ -10,10 +10,10 @@ $con=mysqli_connect("localhost","root","","myhmsdb");
 //  {
 //   $_SESSION['username']=$username;
 //   $_SESSION['pid']=
-//   header("Location:admin-panel.php");
+//   header("Location:admin-panel.html");
 //  }
 //  else
-//   header("Location:error.php");
+//   header("Location:error.html");
 // }
 if(isset($_POST['update_data']))
 {
@@ -22,7 +22,7 @@ if(isset($_POST['update_data']))
  $query="update appointmenttb set payment='$status' where contact='$contact';";
  $result=mysqli_query($con,$query);
  if($result)
-  header("Location:updated.php");
+  header("Location:updated.html");
 }
 
 // function display_docs()
@@ -83,7 +83,7 @@ if(isset($_POST['doc_sub']))
  $query="insert into doctb(username)values('$username')";
  $result=mysqli_query($con,$query);
  if($result)
-  header("Location:adddoc.php");
+  header("Location:adddoc.html");
 }
 
 ?>

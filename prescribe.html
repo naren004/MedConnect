@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-include('func1.php');
+include('func1.html');
 $pid='';
 $ID='';
 $appdate='';
@@ -94,11 +94,11 @@ if(isset($_POST['prescribe']) && isset($_POST['pid']) && isset($_POST['ID']) && 
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
      <ul class="navbar-nav mr-auto">
        <li class="nav-item">
-        <a class="nav-link" href="logout1.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+        <a class="nav-link" href="logout1.html"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
         
       </li>
        <li class="nav-item">
-       <a class="nav-link" href="doctor-panel.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Back</a>
+       <a class="nav-link" href="doctor-panel.html"><i class="fa fa-sign-out" aria-hidden="true"></i>Back</a>
       </li>
     </ul>
   </div>
@@ -116,7 +116,7 @@ if(isset($_POST['prescribe']) && isset($_POST['pid']) && isset($_POST['ID']) && 
    </h3>
 
    <div class="tab-pane" id="list-pres" role="tabpanel" aria-labelledby="list-pres-list">
-        <form class="form-group" name="prescribeform" method="post" action="prescribe.php">
+        <form class="form-group" name="prescribeform" method="post" action="prescribe.html">
         
           <div class="row">
                   <div class="col-md-4"><label>Disease:</label></div>

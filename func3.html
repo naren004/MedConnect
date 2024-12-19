@@ -9,12 +9,12 @@ if(isset($_POST['adsub'])){
 	if(mysqli_num_rows($result)==1)
 	{
 		$_SESSION['username']=$username;
-		header("Location:admin-panel1.php");
+		header("Location:admin-panel1.html");
 	}
 	else
-		// header("Location:error2.php");
+		// header("Location:error2.html");
 		echo("<script>alert('Invalid Username or Password. Try Again!');
-          window.location.href = 'index.php';</script>");
+          window.location.href = 'index.html';</script>");
 }
 if(isset($_POST['update_data']))
 {
@@ -23,7 +23,7 @@ if(isset($_POST['update_data']))
 	$query="update appointmenttb set payment='$status' where contact='$contact';";
 	$result=mysqli_query($con,$query);
 	if($result)
-		header("Location:updated.php");
+		header("Location:updated.html");
 }
 
 
@@ -48,5 +48,5 @@ if(isset($_POST['doc_sub']))
 	$query="insert into doctb(name)values('$name')";
 	$result=mysqli_query($con,$query);
 	if($result)
-		header("Location:adddoc.php");
+		header("Location:adddoc.html");
 }
